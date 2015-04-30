@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Marker" representedClassName="Marker" syncable="YES">
+        <attribute name="imgUrls" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="belongRoutine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Routine" inverseName="markers" inverseEntity="Routine" syncable="YES"/>
+    </entity>
+    <entity name="Routine" representedClassName="Routine" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="markers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Marker" inverseName="belongRoutine" inverseEntity="Marker" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Routine" positionX="-135" positionY="-216" width="128" height="88"/>
+        <element name="Marker" positionX="117" positionY="-180" width="128" height="103"/>
+    </elements>
+</model>
