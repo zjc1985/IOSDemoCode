@@ -43,7 +43,7 @@
     
     Marker *marker=[self.routine.markers allObjects][indexPath.row];
     
-    NSLog(@"row %u title %@ imagUrls %@",indexPath.row,marker.title,marker.imgUrls);
+    NSLog(@"row %u title %@ imagUrls %@ uuid %@",indexPath.row,marker.title,marker.imgUrls,marker.uuid);
     
     cell.markerTitle.text=marker.title;
     cell.markerSubTitle.text=marker.imgUrls;

@@ -23,6 +23,8 @@
 		2884C49D1AF235C400A5FC17 /* MarkerTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2884C49C1AF235C400A5FC17 /* MarkerTVC.m */; };
 		2884C4A01AF23D2B00A5FC17 /* AddMarkerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2884C49F1AF23D2B00A5FC17 /* AddMarkerVC.m */; };
 		2884C4A31AF2455600A5FC17 /* MarkerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2884C4A21AF2455600A5FC17 /* MarkerTableViewCell.m */; };
+		8472FB591AF4B3190065A3E6 /* AVCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8472FB581AF4B3190065A3E6 /* AVCloudManager.m */; };
+		F1945BA666892AC88E5E5BA2 /* libPods-MyRoutineViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D65730D38D9F27CDFD65B7 /* libPods-MyRoutineViewer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07D65730D38D9F27CDFD65B7 /* libPods-MyRoutineViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRoutineViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2884C44E1AF202F000A5FC17 /* MyRoutineViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRoutineViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2884C4521AF202F000A5FC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2884C4531AF202F000A5FC17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +69,10 @@
 		2884C49F1AF23D2B00A5FC17 /* AddMarkerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMarkerVC.m; sourceTree = "<group>"; };
 		2884C4A11AF2455600A5FC17 /* MarkerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerTableViewCell.h; sourceTree = "<group>"; };
 		2884C4A21AF2455600A5FC17 /* MarkerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerTableViewCell.m; sourceTree = "<group>"; };
+		44EE79773B09C00D92818DBB /* Pods-MyRoutineViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRoutineViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRoutineViewer/Pods-MyRoutineViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		735CFD301048F8BC9FFAF37C /* Pods-MyRoutineViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRoutineViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRoutineViewer/Pods-MyRoutineViewer.release.xcconfig"; sourceTree = "<group>"; };
+		8472FB571AF4B3190065A3E6 /* AVCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCloudManager.h; sourceTree = "<group>"; };
+		8472FB581AF4B3190065A3E6 /* AVCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCloudManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1945BA666892AC88E5E5BA2 /* libPods-MyRoutineViewer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +100,8 @@
 				2884C4501AF202F000A5FC17 /* MyRoutineViewer */,
 				2884C46D1AF202F000A5FC17 /* MyRoutineViewerTests */,
 				2884C44F1AF202F000A5FC17 /* Products */,
+				5CF1DECD300B56002EE5EB70 /* Pods */,
+				B75C409B7BF08D96630A578A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +177,8 @@
 				2884C48C1AF2157800A5FC17 /* Routine.m */,
 				2884C4881AF2149200A5FC17 /* RoutineManager.h */,
 				2884C4891AF2149200A5FC17 /* RoutineManager.m */,
+				8472FB571AF4B3190065A3E6 /* AVCloudManager.h */,
+				8472FB581AF4B3190065A3E6 /* AVCloudManager.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -186,6 +198,23 @@
 			name = controller;
 			sourceTree = "<group>";
 		};
+		5CF1DECD300B56002EE5EB70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44EE79773B09C00D92818DBB /* Pods-MyRoutineViewer.debug.xcconfig */,
+				735CFD301048F8BC9FFAF37C /* Pods-MyRoutineViewer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B75C409B7BF08D96630A578A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07D65730D38D9F27CDFD65B7 /* libPods-MyRoutineViewer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2884C4741AF202F000A5FC17 /* Build configuration list for PBXNativeTarget "MyRoutineViewer" */;
 			buildPhases = (
+				4155CD548294DE80B159A10F /* Check Pods Manifest.lock */,
 				2884C44A1AF202F000A5FC17 /* Sources */,
 				2884C44B1AF202F000A5FC17 /* Frameworks */,
 				2884C44C1AF202F000A5FC17 /* Resources */,
+				4A81E82389FC508296CFBA53 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -281,6 +312,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4155CD548294DE80B159A10F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A81E82389FC508296CFBA53 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyRoutineViewer/Pods-MyRoutineViewer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2884C44A1AF202F000A5FC17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -291,6 +355,7 @@
 				2884C4A01AF23D2B00A5FC17 /* AddMarkerVC.m in Sources */,
 				2884C4961AF21F4900A5FC17 /* SubTitleTableViewCell.m in Sources */,
 				2884C45A1AF202F000A5FC17 /* MyRoutineViewer.xcdatamodeld in Sources */,
+				8472FB591AF4B3190065A3E6 /* AVCloudManager.m in Sources */,
 				2884C4541AF202F000A5FC17 /* main.m in Sources */,
 				2884C48D1AF2157800A5FC17 /* Routine.m in Sources */,
 				2884C48A1AF2149200A5FC17 /* RoutineManager.m in Sources */,
@@ -421,6 +486,7 @@
 		};
 		2884C4751AF202F000A5FC17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44EE79773B09C00D92818DBB /* Pods-MyRoutineViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyRoutineViewer/Info.plist;
@@ -431,6 +497,7 @@
 		};
 		2884C4761AF202F000A5FC17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 735CFD301048F8BC9FFAF37C /* Pods-MyRoutineViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyRoutineViewer/Info.plist;

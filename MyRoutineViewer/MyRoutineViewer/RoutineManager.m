@@ -71,12 +71,36 @@
     return result;
 }
 
+-(Routine *)queryRoutineWithUUID:(NSString *)uuid{
+    NSFetchRequest *request=[[NSFetchRequest alloc]init];
+    NSEntityDescription *e=[NSEntityDescription entityForName:@"Routine"
+                                       inManagedObjectContext:self.context];
+    request.entity=e;
+    NSSortDescriptor *sd=[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
+    request.sortDescriptors=@[sd];
+    
+    request.predicate= [NSPredicate predicateWithFormat:@"uuid=%@",uuid];
+    
+    NSError *error;
+    NSArray *result=[self.context executeFetchRequest:request error:&error];
+    if(!result){
+        [NSException raise:@"Fetch failed"
+                    format:@"Reason: %@", [error localizedDescription]];
+    }
+    
+    return [result firstObject];
+}
+
 -(Routine *)createRoutineWithTitle:(NSString *)title{
+    NSUUID *uuid=[[NSUUID alloc]init];
+    return [self createRoutineWithTitle:title withUUID:[uuid UUIDString]];
+}
+
+-(Routine *)createRoutineWithTitle:(NSString *)title withUUID:(NSString *)uuid{
     Routine *routine=[NSEntityDescription insertNewObjectForEntityForName:@"Routine"
                                                    inManagedObjectContext:self.context];
     routine.title=title;
-    NSUUID *uuid=[[NSUUID alloc]init];
-    routine.uuid=[uuid UUIDString];
+    routine.uuid=uuid;
     return routine;
 }
 
@@ -85,13 +109,36 @@
 }
 
 -(Marker *)createMarkerInRoutine:(Routine *)routine{
+    NSUUID *uuid=[[NSUUID alloc]init];
+    return [self createMarkerInRoutine:routine withUUID:[uuid UUIDString]];
+}
+
+-(Marker *)createMarkerInRoutine:(Routine *)routine withUUID:(NSString *)uuid{
     Marker *marker=[NSEntityDescription insertNewObjectForEntityForName:@"Marker"
                                                  inManagedObjectContext:self.context];
-    NSUUID *uuid=[[NSUUID alloc]init];
-    marker.uuid=[uuid UUIDString];
     marker.belongRoutine=routine;
-    //[routine addMarkersObject:marker];
+    marker.uuid=uuid;
     return marker;
+}
+
+-(Marker *)fetchMarkerByUUID:(NSString *)uuid{
+    NSFetchRequest *request=[[NSFetchRequest alloc]init];
+    NSEntityDescription *e=[NSEntityDescription entityForName:@"Marker"
+                                       inManagedObjectContext:self.context];
+    request.entity=e;
+    NSSortDescriptor *sd=[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
+    request.sortDescriptors=@[sd];
+    
+    request.predicate= [NSPredicate predicateWithFormat:@"uuid=%@",uuid];
+    
+    NSError *error;
+    NSArray *result=[self.context executeFetchRequest:request error:&error];
+    if(!result){
+        [NSException raise:@"Fetch failed"
+                    format:@"Reason: %@", [error localizedDescription]];
+    }
+    
+    return [result firstObject];
 }
 
 -(void)removeMarker:(Marker *)marker{

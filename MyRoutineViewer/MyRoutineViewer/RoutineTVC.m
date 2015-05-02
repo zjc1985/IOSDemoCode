@@ -11,10 +11,12 @@
 #import "SubTitleTableViewCell.h"
 #import "AddRoutineVC.h"
 #import "MarkerTVC.h"
+#import "AVCloudManager.h"
 
-@interface RoutineTVC ()
+@interface RoutineTVC ()<AVCloudManagerDelegate>
 
 @property(nonatomic,strong)RoutineManager *routineManager;
+@property(nonatomic,strong)AVCloudManager *avManager;
 
 @end
 
@@ -22,13 +24,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UINavigationItem *navItem = self.navigationItem;
     
+    UINavigationItem *navItem = self.navigationItem;
     navItem.leftBarButtonItem=self.editButtonItem;
+    
+    self.avManager.delegate=self;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"routineTVC will appear");
+    
     [self.tableView reloadData];
+    [self.avManager startToFetchAllRoutines];
 }
 
 #pragma mark - getters and setters
@@ -38,6 +45,20 @@
     }
     return _routineManager;
 }
+
+-(AVCloudManager *)avManager{
+    if(!_avManager){
+        _avManager=[[AVCloudManager alloc]init];
+    }
+    return _avManager;
+}
+
+#pragma mark - av cloud delgate
+-(void)fetchAllRoutinesDone{
+    NSLog(@"net work fetchh all routine done");
+    [self.tableView reloadData];
+}
+
 
 #pragma mark - ui action
 
@@ -58,6 +79,7 @@
     SubTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"subTitleTableCell" forIndexPath:indexPath];
     
     Routine *routine=[self.routineManager getAllRoutine][indexPath.row];
+    
     
     cell.titleLabel.text=routine.title;
     cell.subTitleLabel.text=[NSString stringWithFormat:@"%u",[routine.markers count]];

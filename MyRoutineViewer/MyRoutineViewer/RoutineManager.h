@@ -15,11 +15,15 @@
 +(instancetype)sharedManager;
 
 -(Routine *)createRoutineWithTitle:(NSString *)title;
+-(Routine *)createRoutineWithTitle:(NSString *)title withUUID:(NSString *)uuid;
+-(Routine *)queryRoutineWithUUID:(NSString *)uuid;
 -(void)removeRoutine:(Routine *)routine;
 -(NSArray *)getAllRoutine;
 
 -(Marker *)createMarkerInRoutine:(Routine *)routine;
+-(Marker *)createMarkerInRoutine:(Routine *)routine withUUID:(NSString *)uuid;
 -(void)removeMarker:(Marker *)marker;
+-(Marker *)fetchMarkerByUUID:(NSString *)uuid;
 
 -(BOOL)saveChanges;
 
