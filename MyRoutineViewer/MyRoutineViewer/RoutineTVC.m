@@ -28,14 +28,14 @@
     UINavigationItem *navItem = self.navigationItem;
     navItem.leftBarButtonItem=self.editButtonItem;
     
-    self.avManager.delegate=self;
+    [self.refreshControl addTarget:self action:@selector(fetchCloudRoutine) forControlEvents:UIControlEventValueChanged];
+    
+    [self fetchCloudRoutine];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     NSLog(@"routineTVC will appear");
-    
-    [self.tableView reloadData];
-    [self.avManager startToFetchAllRoutines];
+    self.avManager.delegate=self;
 }
 
 #pragma mark - getters and setters
@@ -54,9 +54,22 @@
 }
 
 #pragma mark - av cloud delgate
+-(void)fetchCloudRoutine{
+    [self.refreshControl beginRefreshing];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [self.avManager startToFetchAllRoutines];
+}
+
 -(void)fetchAllRoutinesDone{
+    [self.refreshControl endRefreshing];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     NSLog(@"net work fetchh all routine done");
     [self.tableView reloadData];
+}
+
+-(void)fetchAllRoutinesError{
+    [self.refreshControl endRefreshing];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 
@@ -137,7 +150,8 @@
     
     if([segue.identifier isEqualToString:@"markerSegue"]){
         MarkerTVC *markerTVC=segue.destinationViewController;
-        markerTVC.manager=self.routineManager;
+        markerTVC.dbManager=self.routineManager;
+        markerTVC.avManager=self.avManager;
         markerTVC.routine=sender;
     }
 }

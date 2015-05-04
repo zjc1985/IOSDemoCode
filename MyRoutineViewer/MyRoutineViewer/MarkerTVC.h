@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "RoutineManager.h"
+#import "AVCloudManager.h"
 
 @interface MarkerTVC : UITableViewController
 
 @property(nonatomic,strong)Routine *routine;
-@property(nonatomic,strong)RoutineManager *manager;
+@property(nonatomic,strong)RoutineManager *dbManager;
+@property(nonatomic,strong)AVCloudManager *avManager;
 
 @end

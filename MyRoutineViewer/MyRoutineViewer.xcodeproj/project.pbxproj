@@ -23,6 +23,7 @@
 		2884C49D1AF235C400A5FC17 /* MarkerTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2884C49C1AF235C400A5FC17 /* MarkerTVC.m */; };
 		2884C4A01AF23D2B00A5FC17 /* AddMarkerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2884C49F1AF23D2B00A5FC17 /* AddMarkerVC.m */; };
 		2884C4A31AF2455600A5FC17 /* MarkerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2884C4A21AF2455600A5FC17 /* MarkerTableViewCell.m */; };
+		28E261C61AF774A80019611C /* Marker+MarkerExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E261C51AF774A80019611C /* Marker+MarkerExtension.m */; };
 		8472FB591AF4B3190065A3E6 /* AVCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8472FB581AF4B3190065A3E6 /* AVCloudManager.m */; };
 		F1945BA666892AC88E5E5BA2 /* libPods-MyRoutineViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D65730D38D9F27CDFD65B7 /* libPods-MyRoutineViewer.a */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,8 @@
 		2884C49F1AF23D2B00A5FC17 /* AddMarkerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMarkerVC.m; sourceTree = "<group>"; };
 		2884C4A11AF2455600A5FC17 /* MarkerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerTableViewCell.h; sourceTree = "<group>"; };
 		2884C4A21AF2455600A5FC17 /* MarkerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerTableViewCell.m; sourceTree = "<group>"; };
+		28E261C41AF774A80019611C /* Marker+MarkerExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Marker+MarkerExtension.h"; sourceTree = "<group>"; };
+		28E261C51AF774A80019611C /* Marker+MarkerExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Marker+MarkerExtension.m"; sourceTree = "<group>"; };
 		44EE79773B09C00D92818DBB /* Pods-MyRoutineViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRoutineViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRoutineViewer/Pods-MyRoutineViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		735CFD301048F8BC9FFAF37C /* Pods-MyRoutineViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRoutineViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRoutineViewer/Pods-MyRoutineViewer.release.xcconfig"; sourceTree = "<group>"; };
 		8472FB571AF4B3190065A3E6 /* AVCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCloudManager.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 			children = (
 				2884C48E1AF2157900A5FC17 /* Marker.h */,
 				2884C48F1AF2157900A5FC17 /* Marker.m */,
+				28E261C41AF774A80019611C /* Marker+MarkerExtension.h */,
+				28E261C51AF774A80019611C /* Marker+MarkerExtension.m */,
 				2884C48B1AF2157800A5FC17 /* Routine.h */,
 				2884C48C1AF2157800A5FC17 /* Routine.m */,
 				2884C4881AF2149200A5FC17 /* RoutineManager.h */,
@@ -355,6 +360,7 @@
 				2884C4A01AF23D2B00A5FC17 /* AddMarkerVC.m in Sources */,
 				2884C4961AF21F4900A5FC17 /* SubTitleTableViewCell.m in Sources */,
 				2884C45A1AF202F000A5FC17 /* MyRoutineViewer.xcdatamodeld in Sources */,
+				28E261C61AF774A80019611C /* Marker+MarkerExtension.m in Sources */,
 				8472FB591AF4B3190065A3E6 /* AVCloudManager.m in Sources */,
 				2884C4541AF202F000A5FC17 /* main.m in Sources */,
 				2884C48D1AF2157800A5FC17 /* Routine.m in Sources */,
@@ -492,6 +498,7 @@
 				INFOPLIST_FILE = MyRoutineViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "609b4d85-dd5f-424a-b1a0-3da778edf7dd";
 			};
 			name = Debug;
 		};
@@ -503,6 +510,7 @@
 				INFOPLIST_FILE = MyRoutineViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "609b4d85-dd5f-424a-b1a0-3da778edf7dd";
 			};
 			name = Release;
 		};

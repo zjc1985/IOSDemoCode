@@ -16,13 +16,21 @@
 -(void)fetchAllRoutinesDone;
 -(void)fetchAllRoutinesError;
 
+-(void)fetchMarkersDone;
+-(void)fetchMarkersFail;
+
 @end
+
 
 @interface AVCloudManager : NSObject
 
 @property(nonatomic,weak)id <AVCloudManagerDelegate> delegate;
 
 -(void)startToFetchAllRoutines;
+
+-(void)startToFetchMarkersByRoutine:(Routine *)routine;
+
+-(void)startToFetchMarkersByRoutine:(Routine *)routine usingBlockWhenDone:(void (^)(NSError *error))block;
 
 @end
 

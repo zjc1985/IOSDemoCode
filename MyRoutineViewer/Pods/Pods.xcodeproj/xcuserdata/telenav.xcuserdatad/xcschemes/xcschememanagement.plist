@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-MyRoutineViewer-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MyRoutineViewer-EGOCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MyRoutineViewer-FSImageViewer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MyRoutineViewer-UAProgressView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MyRoutineViewer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2F050955B33EAAEB127A9359</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7028306C43D49C7601408F7F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8AFBF7E79199829BDC25C600</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9D7F1785B58E4070354A2A73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A35CE8254FB64E47EE1B23FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

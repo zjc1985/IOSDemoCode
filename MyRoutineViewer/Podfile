@@ -3,6 +3,7 @@
 
 target 'MyRoutineViewer' do
 pod 'AVOSCloud'
+pod 'FSImageViewer','~>3.2'
 end
 
 target 'MyRoutineViewerTests' do
